@@ -1,0 +1,220 @@
+@import url(../../assets/css/bootstrap.min.css);
+@import url(../../assets/css/tienda.css);
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* zona cart */
+.cartItem {
+  display:flex;
+  margin-left: 40px;
+}
+
+.quantity {
+  margin-left: 10%;
+}
+
+.cartItemValue {
+  display:flex;
+  justify-content: space-between;
+  margin-left: 40px;
+  height: 45px;
+}
+
+
+.deleteItem {
+  font-size: 45px;
+  position: relative;
+  bottom: 41px;
+}
+
+.addedItems {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  font-size: large;
+  color: #c4c4c4;
+}
+
+.total {
+  font-size: large;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.shCart {
+  vertical-align: -webkit-baseline-middle;
+}
+
+.spanCart {
+  position: absolute;
+  top: 17px;
+  left: 115px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.cart-basket {
+  font-size: 0.6rem;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  background-color: #418deb;
+  border-radius: 50%;
+}
+.cartContainer {
+  position: relative;
+  top: 31px;
+  margin-right: 70px;
+  background: none;
+  border: none;
+  height: -webkit-fill-available;
+  outline: none;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.sidecart {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: rgb(0, 0, 0, 1); /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  text-align: left;
+  color: #c4c4c4;
+}
+
+/* The navigation menu links */
+.sidecart a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidecart a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidecart .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 2rem;
+}
+.spanmenu {
+  position: absolute;
+  top: 17px;
+  left: 104px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* SideNav y Footer*/
+.headerlogo {
+  max-width: 180px;
+}
+
+.footerlogo {
+  max-width: 240px;
+}
+
+.row {
+  text-align: center;
+}
+
+.header-area {
+  border-bottom: none;
+}
+
+.footer {
+  margin-top: 0px;
+}
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Stay on top */
+  top: 0; /* Stay at the top */
+  right: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  font-size: 2rem;
+}
+.spanmenu {
+  position: absolute;
+  top: 17px;
+  left: 104px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left 0.5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  .sidecart {
+    padding-top: 15px;
+  }
+  .sidecart a {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-height: 767px) {
+  .cartContainer {
+    margin-right: 75px;
+  }
+}

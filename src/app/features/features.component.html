@@ -1,0 +1,138 @@
+<header class="header-area header-sticky">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <nav class="main-nav">
+          <a routerLink="home" class="logo">
+            <img class="headerlogo" src="../../assets/images/logo-nav.png" />
+          </a>
+          <ul class="nav">
+            <li><a routerLink="home">Inicio</a></li>
+            <li><a routerLink="products">Productos</a></li>
+            <li><a routerLink="contact">Contáctanos</a></li>
+            <li><a routerLink="about">Sobre Nosotros</a></li>
+          </ul>
+          <button class="cartContainer" (click)="sides('mySideCart')">
+            <fa-icon icon="shopping-cart" size="lg" class="shCart"></fa-icon>
+            <span class="cart-basket">
+              {{ servicio.cartQuantity }}
+            </span>
+          </button>
+          <div id="mySideCart" class="sidecart">
+            <span class="spanCart">CARRITO</span>
+            <a href="javascript:void(0)" class="closebtn" (click)="sides('mySideCart')"
+              >&times;</a>
+            <p class="addedItems">Items Agregados:</p>
+            <div class="itemContainer" *ngFor="let item of servicio.cart">
+              <div class="cartItem">
+                <span class="itemName">{{item.nombre}}</span>
+                <span class="quantity">x{{item.cantidad}}</span>
+              </div>
+              <div class="cartItemValue">
+                <span class="itemValue">${{item.valor*item.cantidad}}.00</span>
+                <span class="deleteItem" (click)="deleteProduct(item.id)">&times;</span>
+              </div>
+
+            </div>
+            <span class="total">TOTAL: $ {{ servicio.total }}.00</span>
+          </div>
+          <a class="menu-trigger" *ngIf="this.navBtnStatus" (click)="sides('mySideNav')">
+            <span></span>
+          </a>
+          <div id="mySideNav" class="sidenav">
+            <span class="spanmenu">MENU</span>
+            <a href="javascript:void(0)" class="closebtn" (click)="sides('mySideNav')"
+              >&times;</a
+            >
+            <a routerLink="home">Inicio</a>
+            <a routerLink="products">Productos</a>
+            <a routerLink="about">Sobre Nosotros</a>
+            <a routerLink="contact">Contáctanos</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3">
+        <div class="first-item">
+          <div class="logo">
+            <img
+              class="footerlogo"
+              src="../../assets/images/logo.png"
+              alt="logo de tu tienda"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <h4>Shopping y Categorías</h4>
+        <ul>
+          <li><a routerLink="products">Hombres</a></li>
+          <li><a routerLink="products">Mujeres</a></li>
+          <li><a routerLink="products">Infantes</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4>Links Útiles</h4>
+        <ul>
+          <li><a routerLink="home">Inicio</a></li>
+          <li><a routerLink="about">Sobre Nosotros</a></li>
+          <li><a href="#">Ayuda</a></li>
+          <li><a routerLink="contact">Contactanos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h4>Ayuda e Información</h4>
+        <ul>
+          <li><a href="#">Ayuda</a></li>
+          <li><a href="#">FAQ's</a></li>
+          <li><a href="#">Envios</a></li>
+          <li><a href="#">Tracking ID</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-12">
+        <div class="under-footer">
+          <p>
+            Copyright © 2022 Tu Tienda Co., Ltd. Todos los derechos reservados.
+            <br />Diseño:
+            <a href="https://lucasjoel.netlify.app/" target="_blank"
+              >Lucas Joel Mac Gregor.</a
+            >
+          </p>
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/"
+                ><i class="fa fa-facebook"
+                  ><img
+                    src="../../assets/icons/facebook.svg"
+                    alt="facebook logo" /></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.twitter.com/"
+                ><i class="fa fa-twitter"
+                  ><img
+                    src="../../assets/icons/twitter.svg"
+                    alt="twitter
+                  logo" /></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/"
+                ><i class="fa fa-instagram"></i
+                ><img
+                  src="../../assets/icons/instagram.svg"
+                  alt="logo instagram"
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

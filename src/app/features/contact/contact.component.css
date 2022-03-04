@@ -1,0 +1,5 @@
+@import url(../../../assets/css/bootstrap.min.css);
+@import url(../../../assets/css/tienda.css);
+.page-heading {
+  margin-top: 90px;
+}

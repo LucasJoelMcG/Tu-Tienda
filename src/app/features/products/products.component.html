@@ -1,0 +1,75 @@
+<div class="page-heading" id="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="inner-content">
+          <h2>Nuestros Productos</h2>
+          <span>Lo mejor para vos</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="section" id="products">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="section-heading">
+          <h2>Últimas Adiciones</h2>
+          <span>Descubre lo nuevo en nustra tienda.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4" *ngFor="let item of stock">
+        <div class="item">
+          <div class="thumb">
+            <div class="hover-content">
+              <ul>
+                <li>
+                  <a href={{item.src}} target="_blank">
+                    <fa-icon icon="eye" size="lg"></fa-icon>
+                  </a>
+                </li>
+                <li>
+                  <a (click)="addProduct(item.id)">
+                    <fa-icon icon="shopping-cart" size="lg"></fa-icon>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <img src={{item.src}} alt="" />
+          </div>
+          <div class="down-content">
+            <h4>{{item.nombre}}</h4>
+            <span>${{item.valor}}.00</span>
+          </div>
+        </div>
+      </div>
+      <!--div class="col-lg-12">
+        <div class="pagination">
+          <ul>
+            <li class="active">
+              <a href="#">1</a>
+            </li>
+            <li>
+              <a href="#">2</a>
+            </li>
+            <li>
+              <a href="#">3</a>
+            </li>
+            <li>
+              <a href="#">4</a>
+            </li>
+            <li>
+              <a href="#">></a>
+            </li>
+          </ul>
+        </div>
+      </div-->
+    </div>
+  </div>
+</section>
+<!-- ***** Products Area Ends ***** -->
