@@ -20,28 +20,42 @@
           </button>
           <div id="mySideCart" class="sidecart">
             <span class="spanCart">CARRITO</span>
-            <a href="javascript:void(0)" class="closebtn" (click)="sides('mySideCart')"
-              >&times;</a>
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              (click)="sides('mySideCart')"
+              >&times;</a
+            >
             <p class="addedItems">Items Agregados:</p>
             <div class="itemContainer" *ngFor="let item of servicio.cart">
               <div class="cartItem">
-                <span class="itemName">{{item.nombre}}</span>
-                <span class="quantity">x{{item.cantidad}}</span>
+                <span class="itemName">{{ item.nombre }}</span>
+                <span class="quantity">x{{ item.cantidad }}</span>
               </div>
               <div class="cartItemValue">
-                <span class="itemValue">${{item.valor*item.cantidad}}.00</span>
-                <span class="deleteItem" (click)="deleteProduct(item.id)">&times;</span>
+                <span class="itemValue"
+                  >${{ item.valor * item.cantidad }}.00</span
+                >
+                <span class="deleteItem" (click)="deleteProduct(item.id)"
+                  >&times;</span
+                >
               </div>
-
             </div>
             <span class="total">TOTAL: $ {{ servicio.total }}.00</span>
           </div>
-          <a class="menu-trigger" *ngIf="this.navBtnStatus" (click)="sides('mySideNav')">
+          <a
+            class="menu-trigger"
+            *ngIf="this.navBtnStatus"
+            (click)="sides('mySideNav')"
+          >
             <span></span>
           </a>
           <div id="mySideNav" class="sidenav">
             <span class="spanmenu">MENU</span>
-            <a href="javascript:void(0)" class="closebtn" (click)="sides('mySideNav')"
+            <a
+              href="javascript:void(0)"
+              class="closebtn"
+              (click)="sides('mySideNav')"
               >&times;</a
             >
             <a routerLink="home">Inicio</a>

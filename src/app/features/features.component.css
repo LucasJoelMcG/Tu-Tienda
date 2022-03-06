@@ -8,7 +8,7 @@
 
 /* zona cart */
 .cartItem {
-  display:flex;
+  display: flex;
   margin-left: 40px;
 }
 
@@ -17,12 +17,11 @@
 }
 
 .cartItemValue {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   margin-left: 40px;
   height: 45px;
 }
-
 
 .deleteItem {
   font-size: 45px;
@@ -95,6 +94,11 @@ button:focus {
   color: #c4c4c4;
 }
 
+@supports (-moz-appearance: none) {
+  .cartContainer {
+    top: -3px;
+  }
+}
 /* The navigation menu links */
 .sidecart a {
   padding: 8px 8px 8px 32px;
