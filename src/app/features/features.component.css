@@ -27,6 +27,9 @@
   font-size: 45px;
   position: relative;
   bottom: 41px;
+  background: none;
+  border: none;
+  color: white;
 }
 
 .addedItems {

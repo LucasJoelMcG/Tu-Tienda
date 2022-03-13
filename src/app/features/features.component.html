@@ -36,9 +36,9 @@
                 <span class="itemValue"
                   >${{ item.valor * item.cantidad }}.00</span
                 >
-                <span class="deleteItem" (click)="deleteProduct(item.id)"
-                  >&times;</span
-                >
+                <button class="deleteItem" (click)="deleteProduct(item.id)">
+                  &times;
+                </button>
               </div>
             </div>
             <span class="total">TOTAL: $ {{ servicio.total }}.00</span>
